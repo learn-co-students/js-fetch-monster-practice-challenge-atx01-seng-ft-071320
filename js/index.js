@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", (e) => {
     const backButton = document.getElementById("back");
     let page = 1;
     let pageCount = 20;
-    console.log(pageCount);
     countMonsters();
 
     loadMonsters(monsterContainer, page);
@@ -54,8 +53,7 @@ function countMonsters() {
     fetch(monsterListURL)
         .then(response => response.json())
         .then(monsters => {
-            pageCount = Math.floor(monsters.length / 50);
-            console.log(pageCount);
+            pageCount = Math.ceil(monsters.length / 50);
         })
 }
 
