@@ -20,7 +20,7 @@ Then run the server with
 json-server monsters.json
 ```
 
-## Objectives
+## Objectives 
 
 - When the page loads, show the first 50 monsters. Each monster's name, age, and
   description should be shown.
